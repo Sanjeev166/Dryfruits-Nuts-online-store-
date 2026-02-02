@@ -1,38 +1,42 @@
-👉 Technology stack:
+<h1>
+👉 Technology stack:  </h1>
 
-Backend: Django 6.0.1, python 3.13.9
-Database: MySQL
-Frontend: HTML, CSS, javascript
-Editor: visual studio code
-
-
-👉 Mysql config:
-
-DATABASES = {
-   'default':
-    {'ENGINE': 'django.db.backends.mysql',
-
-      'NAME': 'your MySQL schema name',
-
-      'USER': 'your MySQL name',
-
-      'PASSWORD': 'your MySQL password',
-
-      'HOST': 'your MySQL host name',
-
-      'PORT': 'your MySQL port number'
-
-  }
-
-}   
+<p> Backend: Django 6.0.1, python 3.13.9 </p>
+<p> Database: MySQL </p>
+<p> Frontend: HTML, CSS, javascript </p>
+<p> Editor: visual studio code </p>
 
 
-👉 key features:
+<h1>
+  👉 Mysql config: </h1>
 
-📌 customized user model
-📌 Admin page setup
-📌 Foriegnkey setup in models
-📌 Login/signup authentication 
-📌 sessions created for Login users
-📌 Add to cart & Checkout feature.
-📌 clean and responsive UI interface
+<p>
+  DATABASES = {      </p>
+  <p> 'default':  </p>
+<p> {'ENGINE': 'django.db.backends.mysql',  </p>
+
+  <p> 'NAME': 'your MySQL schema name',  </p>
+
+ <p>  'USER': 'your MySQL name',  </p>
+ 
+ <p>  'PASSWORD': 'your MySQL password',   </p>
+
+<p>  'HOST': 'your MySQL host name',  </p>
+
+<p>  'PORT': 'your MySQL port number'  </p>
+
+<p>}     </p>
+
+}  </p>   
+
+
+<h1>
+  👉 key features: </h1>
+
+<p> 📌 customized user model </p>
+<p> 📌 Admin page setup  </p>
+<p> 📌 Foriegnkey setup in models </p>
+<p> 📌 Login/signup authentication </p>
+<p> 📌 sessions created for Login users </p>
+<p> 📌 Add to cart & Checkout feature.  </p>
+<p> 📌 clean and responsive UI interface  </p>
