@@ -1,0 +1,36 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>  </title>
+    <link rel="stylesheet" href="{% static 'css/A.css' %}">
+</head>    
+<body>
+    <section class="login">
+        <div class="loginform-container">
+            <h2> Login </h2>
+            <form action="" method="POST" class="loginform">
+                {%csrf_token%}
+                <div class="logininput"> 
+                    <label for="username"> Username: </label>
+                    <input type="text" name="usrnme" placeholder="Enter Username" > <br>
+                </div>
+                <div class="logininput">   
+                    <label for="password"> Password: </label>
+                    <input type="password" name="psswrd" placeholder="Enter Your Password">
+                </div>  
+                <div class="loginbtn-container">  
+                    <p  id="errmssg"> {{error}} </p>
+                    <button type="submit" class="loginbtn"> Login </button> 
+                </div>    
+                <div class="login_accsign">
+                    <p> Don't have an account?<a href="/signup/"><b> Sign up <b></a> </p>
+                </div> 
+            </form> 
+        </div>       
+    </section>
+</body>    
+</html>

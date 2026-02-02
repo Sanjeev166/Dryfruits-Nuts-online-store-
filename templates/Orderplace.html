@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+                  <h2 class="checkout"> Checkout </h2>
+<section class="orderplace-section" id="orderplace-section" >
+            
+        <div class="orderplace-card-2">  
+         <h3> Your Order <h3>
+            {% for i in cart_items2 %}
+              <div>
+                <p> <b>Item:</b>  {{i.items.name}} </p>
+                <p> <b>Price:</b>  ₹{{i.items.price}}   </p>
+                <p> <b>Quantity:</b>  {{i.quantity}}  </p> <br>
+               </div>     
+           {% endfor %}
+
+              <p> <b>Total pay:</b>  ₹{{totalpay}} </p>
+            
+        </div>
+
+        <div class="orderplace-card">
+            <form action="" method="POST" id="myform" class="myform" onsubmit="showPaymentAlert();">
+              {% csrf_token %}
+            
+                <label for="fullname"> Full Name : </label> <br>
+                <input type="text" id="fullname" name="fullname" autocomplete="fullname" required> <br><br>
+
+                <label for="contact"> Contact : </label> <br>
+                <input type="number" id="contact" name="contact" autocomplete="contact" required> <br><br>
+
+                <label for="address"> Delivery Address : </label> <br>
+                <textarea id="address" name="address" autocomplete="address" rows="3" cols="25" required></textarea> <br>
+                
+                <label for="Payment method"> Payment method: </label> <br>
+                <select id="Payment-method" name="Payment-method">
+                    <option value="Pay on Delivery" class="option"> Pay on Delivery </option> 
+                    <option value="UPI transcation" class="option"> UPI transcation </option>
+                </select> <br><br>
+                <button type="submit" id="paybutton"  >  Pay Now  </button> 
+                
+            </form>       
+        </div>
+        
+</section>
+
+<script > 
+    function showPaymentAlert() {
+        alert("Payment Successful! Your order has been placed 🎉");
+    }
+</script>
+
+{% endblock %}
+
+
+<div class="orderplace-container" id="orderplace-container">

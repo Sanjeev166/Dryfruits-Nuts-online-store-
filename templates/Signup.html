@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Dry fruits & Nuts(online store) </title>
+    <link rel="stylesheet" href="{% static 'css/A.css' %}">
+</head>    
+<body>
+    <section class="signup">
+        <div class="signupform-container">
+            <h2> Register </h2>
+            <form action="" method="POST" class="signupform">
+                {%csrf_token%}
+                <div class="signupinput"> 
+                    <label for="username"> Name: </label>
+                    <input type="text" name="usrnme" placeholder="Enter Username" required> 
+                </div>
+                <div class="signupinput"> 
+                    <label for="email"> Email: </label>
+                    <input type="email" name="eml" placeholder="Enter email" required>
+                </div>
+                <div class="signupinput">   
+                    <label for="password"> Password: </label>
+                    <input type="password" name="psword" placeholder="Enter Your Password" required> 
+                </div>  
+                <div class="signupbtn-container">  
+                    <p> {{error2}} </p>
+                    <button type="submit" class="signupbtn"> Sign Up </button>
+                </div>    
+                <div class="login_accsign">
+                    <p> Already have an account?<a href="/login/"><b> Login <b></a> </p>
+                </div>     
+            </form> 
+        </div>       
+    </section>
+
+</body>
+</html>   

@@ -1,0 +1,569 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;   
+}
+
+body{
+    line-height: 1.6;
+    background: transparent;
+}
+
+ 
+section{
+    padding: 17px 7%;
+}
+
+
+/*Navbar*/
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 8%;
+    align-items: center;
+    background: rgb(238, 229, 229);
+}
+
+.logo{
+    font-weight: 750;
+    color: rgb(126, 140, 155);
+}
+
+.navbar nav a{
+    text-decoration: none;
+    margin-left: 15px;
+    color: rgb(201, 40, 40);
+    transition: 0.2s ease;
+}
+
+.navbar nav a:hover{
+    border-bottom: 3px solid rgb(201, 40, 40);
+}
+
+#menu-toggle{
+    display: none;
+}
+
+.menu-icon{
+    display: none;
+    font-size: 30px;
+    color: rgb(201, 40, 40);
+    cursor: pointer;
+}
+
+
+
+/*Home*/
+.home {
+    background-image: url('../assets/images/banner_1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.h6-categories{
+    text-align: center;
+    font-size: 35px;
+    padding: 20px;
+    background-color: rgb(238, 229, 229);
+    color: rgb(201, 40, 40); 
+}
+
+.categories-section{
+    padding: 20px;
+    background-color: rgb(238, 229, 229);
+}
+
+.items-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.card{
+    background: white;
+    padding: 10px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    border: 1px solid gray;
+    transition: 0.3s;
+}
+
+.card:hover{
+    transform: scale(1.1);
+}
+
+.card img{
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.btn{
+    display: inline-block;
+    padding: 6px 8px;
+    color: rgb(201, 40, 40);
+    background: white;
+    border: 1px solid rgb(201, 40, 40);
+    text-decoration: none;
+    margin-top: 6px;
+    border-radius: 6px;
+}
+
+.btn:hover{
+    background: rgb(201, 40, 40);
+    color: white;
+}
+
+.item-price{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(201, 40, 40);
+    font-weight: 550;
+}
+
+
+
+/*Cart page*/
+.cart-section{
+    min-height: 100vh;
+
+} 
+
+.cart-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.cart-card{
+    background: white;
+    padding: 10px;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0,0,0,0.5);
+    border: 1px solid gray;
+}
+
+.cart-card img{
+    width: 100%;
+    height: 130px;
+    object-fit: contain;
+    border-radius: 20px;
+}
+
+.quantitychange{
+    font-weight: 550;
+    color: blueviolet;
+}
+
+.minus-quantity{
+    text-decoration: none;
+    padding: 2px;
+    font-size: 12px;
+}
+
+.add-quantity{
+    text-decoration: none;
+    padding: 2px;
+    font-size: 12px;
+}
+
+.emptycart{
+    font-weight: 600;
+    color: rgb(201, 40, 40);
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+.totalprice-cart{
+    margin-top: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(201, 40, 40);
+    font-weight: 550;
+    font-size: 1.1rem;
+}
+
+.continuecart{
+    margin-top: 30px;
+    text-decoration: none;
+    color: rgb(201, 40, 40);
+    font-weight: 550;
+    font-size: 1.1rem;
+}
+
+.continue-cart{
+    text-align: center;
+    padding: 20px;
+}
+
+.continue-cart a{
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(201, 40, 40);
+    background: white;
+    border: 1px solid rgb(201, 40, 40);
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+.continue-cart a:hover{
+    background: rgb(201, 40, 40);
+    color: white;
+}
+
+.proc_to_c-cart a{
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-weight: 550;
+    font-size: 1.1rem;
+    padding: 10px;
+    background: rgb(243, 209, 21);
+    border: 2px solid rgb(243, 209, 21);
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+.proc_to_c-cart a:hover{
+    background: white;
+    color: rgb(243, 209, 21);
+}
+
+.proc_to_c-cart{
+    margin: 20px;
+}
+
+
+/*Orders page*/
+.orderplace-section{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.orderplace-container{
+    
+}
+
+.orderplace-card{
+    background: white;
+    padding: 20px 6%;
+    border-radius: 25px;
+    box-shadow: 0 0 20px rgb(137, 153, 169);
+    width:fit-content;
+    height: fit-content;
+    background: rgba(137, 153, 169, 0.6);
+    margin-top: 18px;
+}    
+
+.orderplace-card-2{
+    width:fit-content;
+    height: fit-content;
+}
+
+.orderplace-card-2 h3{
+    margin-bottom: 28px;
+    color: rgb(201, 40, 40);
+    border-bottom: 1px solid rgb(201, 40, 40);
+}
+
+
+.orderplace-card-2 p{
+    font-size: 1.1rem;
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(201, 40, 40);
+}
+
+.orderplace-card-2 b{
+    color: black;
+}
+
+.checkout{
+    text-align: center;
+    color: rgb(201, 40, 40);
+    margin-top: 15px;
+}
+
+.orderplace-card label{
+    color: rgb(180, 161, 55);
+    font-weight: 550;
+}
+
+.orderplace-card input{
+    border-radius: 6px;
+    border: 1px solid rgb(243, 209, 21);
+    padding: 4px;
+}
+
+.orderplace-card textarea{
+    border-radius: 6px;
+    border: 1px solid rgb(243, 209, 21);
+    padding: 4px;
+}
+
+#paybutton{
+    font-weight: 550;
+    padding: 8px;
+    width: 100%;
+    border:none ;
+    border-radius: 10px;
+    color: white;
+    background-color: rgb(243, 209, 21);
+    transition: 0.3s;
+}
+
+#paybutton:hover{
+    transform: scale(1.1);
+}
+
+#Payment-method{
+    border-radius: 6px;
+    color: rgb(180, 161, 55);
+    border: 1px solid rgb(243, 209, 21);
+    padding: 5px;
+}
+
+
+/*Login form*/
+.login{
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(201, 40, 40);
+}
+
+.loginform-container{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.loginform-container h2{
+    text-align: center;
+    color: rgb(74, 76, 78);
+}
+
+.loginform{
+    padding: 25px;
+}
+
+.loginbtn{
+    padding: 6px;
+    border-radius: 20px;
+    font-size: 16px ;
+    margin: 5px;
+    width: 60%;
+    text-align: center;
+    color: white;
+    background: rgb(201, 40, 40);
+    border: none;
+    transition: 0.3s;
+}
+
+.loginbtn:hover{
+    transform: scale(1.1);
+}
+
+.loginbtn-container{
+    text-align: center;
+}
+
+.loginbtn-container p{
+    color: rgb(7, 97, 104);
+}
+
+.logininput{
+    margin: 8px;
+    padding: 4px;
+    border: none;
+}
+
+.logininput input{
+    width: 100%;
+    border: 1px solid rgb(201, 40, 40);
+    background: transparent;
+    border-radius: 15px;
+    padding: 4px;
+}
+
+.loginform label{
+    color: rgb(201, 40, 40);
+}
+
+#nmepsswrd{
+    color:rgb(201, 40, 40);
+    text-align: center;
+}
+
+.login_accsign b{
+    color: rgb(0, 102, 255);
+}
+
+.login_accsign a{
+    text-decoration: none;
+}
+
+.login_accsign {
+    padding: 4px;
+    color: rgb(89, 96, 107);
+}
+
+
+/* Signup */
+.signup{
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(201, 40, 40);
+}
+
+.signupform-container{
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.signupform-container h2{
+    text-align: center;
+    color: rgb(74, 76, 78);
+}
+
+.signupform{
+    padding: 25px;
+}
+
+.signupbtn{
+    padding: 6px;
+    border-radius: 20px;
+    font-size: 16px ;
+    margin: 5px;
+    width: 60%;
+    text-align: center;
+    color: white;
+    background: rgb(201, 40, 40);
+    border: none;
+    transition: 0.3s;
+}
+
+.signupbtn:hover{
+    transform: scale(1.1);
+}
+
+.signupbtn-container{
+    text-align: center;
+}
+
+.signupbtn-container p{
+    color: rgb(7, 97, 104);
+}
+
+.signupinput{
+    margin: 8px;
+    padding: 4px;
+    border: none;
+}
+
+.signupinput input{
+    width: 100%;
+    border: 1px solid rgb(201, 40, 40);
+    background: transparent;
+    border-radius: 15px;
+    padding: 4px;
+}
+
+.signupform label{
+    color: rgb(201, 40, 40);
+}
+
+#nmepsswrd{
+    color:rgb(201, 40, 40);
+    text-align: center;
+}
+
+.login_accsign b{
+    color: rgb(0, 102, 255);
+}
+
+.login_accsign a{
+    text-decoration: none;
+}
+
+.login_accsign {
+    padding: 4px;
+    color: rgb(89, 96, 107);
+}
+
+
+
+/*Footer*/
+footer{
+    background-color: rgb(137, 153, 169);
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.footer-p{
+    border-bottom: 1px solid rgb(74, 76, 78);
+    text-align: start;
+    margin-bottom: 10px;
+}
+
+#footer{
+    color: rgb(74, 76, 78);
+    font-weight: 550;
+    
+}
+
+.footer-p2{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+/*Responsive*/
+@media (max-width: 768px){
+    .menu-icon{
+        display: block;
+    }
+
+    .nav-links{
+        display: none;
+        position:absolute;
+        top: 50px;
+        flex-direction: column;
+        background: rgb(238, 229, 229);
+        width: 60%;
+        z-index: 5000;
+    }
+
+    .nav-links a{
+        text-align: start;
+        padding: 8px 0;
+    }
+
+    #menu-toggle:checked + .menu-icon + .nav-links{
+        display: flex;
+    }
+    /*
+    .login{
+        display: flex;
+    }
+
+    .signup{
+        display: flex;
+    }*/
+}

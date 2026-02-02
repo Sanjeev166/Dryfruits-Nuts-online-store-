@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+
+<section class="cart-section" id="cart-section" >
+    <div class="cart-container" id="cart-container">
+        {% for c_items in cartitems %}
+        <div class="cart-card">
+            <img src="{{c_items.items.itemsimage.url}}">
+            <h3> {{c_items.items.name}} </h3>
+            <p class="item-price"> ₹{{c_items.items.price}} / 250gms </p>
+            <div class="quantitychange">
+                <a href="{% url 'decrease' c_items.items.id  %}" class="minus-quantity" > ➖ </a> 
+                 {{c_items.quantity}} 
+                 <a href="{% url 'increase' c_items.items.id  %}" class="add-quantity" > ➕ </a>
+            </div>  
+            <a href="{% url 'remove_from_cart' c_items.items.id %}" class="btn"> Remove </a>   
+        </div>
+        {% empty %}
+          <p class="emptycart">Your cart is empty.</p>
+        {% endfor %}    
+    </div> 
+    <div class="continue-cart">       
+        <a href="/" > Continue Shopping </a>
+    </div>
+    <div>
+        <p class="totalprice-cart">Total Price: ₹{{ total_price }} </p> 
+    </div>
+    {% if  total_price  %}
+    <div class="proc_to_c-cart">      
+       <a href="/orderplace/"> Proceed to Checkout </a> 
+    </div> 
+    {% endif %} 
+</section>    
+{% endblock %}

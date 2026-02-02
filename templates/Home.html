@@ -1,0 +1,24 @@
+{% extends "base.html" %} 
+
+{% block content %}
+{% load static %}
+
+<section id="home" class="home">
+
+</section>
+
+<h6 class="h6-categories"> Our Categories </h6>
+<section id="categories-section" class="categories-section"> 
+    <div id="items" class="items-container">
+        {% for item in allitems %}
+        <div class="card">
+            <img src="{{item.itemsimage.url}}">
+            <h3> {{item.name}} </h3>
+            <p class="item-price"> ₹{{item.price}} / 250gms </p>
+            <a href="{% url "add_to_cart"  item.id %}" class="btn"> Add to Cart </a>
+        </div>
+        {% endfor %}
+    </div>       
+</section> 
+
+{% endblock %}

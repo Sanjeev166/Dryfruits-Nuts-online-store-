@@ -1,0 +1,41 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dry fruits & Nuts(online store) </title>
+    <link rel="stylesheet" href="{% static 'css/A.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>    
+<body>
+    <!--Navbar-->
+    <header class="navbar">
+        <h2 class="logo"> Dry Fruit & Nut Box  </h2>
+        <input type="checkbox" id="menu-toggle">
+        <label for="menu-toggle" class="menu-icon"> &equiv; </label>
+        <nav class="nav-links"> 
+            <a href="/"> Home </a>
+            <a href="/cart"> Cart🛒  </a>
+            <a href="/login"> Login </a>
+            <a href="/signup"> Signup </a>
+        </nav>    
+    </header>
+
+    {% block content %}
+    
+
+    {% endblock %}
+
+    <!--Footer-->
+    <footer class="footer">
+        <div id="footer">
+            <p class="footer-p">Contact Us <br>
+               admin@gmail.com
+            </p>   
+        </div>
+        <p class="footer-p2"> © 2025| All Rights Reserved </p>        
+    </footer>    
+</body>
+</html>
